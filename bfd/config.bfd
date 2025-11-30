@@ -704,6 +704,11 @@ case "${targ}" in
     targ_selvecs="i386_elf32_vec"
     want64=true
     ;;
+  x86_64-*-bentobox*)
+    targ_defvec=x86_64_elf64_vec
+    targ_selvecs=i386_elf32_vec
+    want64=true
+    ;;
   x86_64-*-netbsd* | x86_64-*-openbsd*)
     targ_defvec=x86_64_elf64_vec
     targ_selvecs="i386_elf32_vec iamcu_elf32_vec i386_coff_vec i386_pei_vec x86_64_pe_vec x86_64_pei_vec"
@@ -735,6 +740,11 @@ case "${targ}" in
     want64=true
     ;;
 #endif
+  i[3-7]86-*-bentobox*)
+    targ_defvec=i386_elf32_vec
+    targ_selvecs=
+    targ64_selvecs=x86_64_elf64_vec
+    ;;
   i[3-7]86-*-lynxos*)
     targ_defvec=i386_elf32_vec
     targ_selvecs="iamcu_elf32_vec i386_coff_lynx_vec i386_aout_lynx_vec"

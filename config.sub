@@ -1976,6 +1976,7 @@ case $os in
 	| atheos* \
 	| auroraux* \
 	| aux* \
+	| bentobox* \
 	| beos* \
 	| bitrig* \
 	| bme* \
