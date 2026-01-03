@@ -85,6 +85,10 @@ case "${targ}" in
 aarch64_be-*-elf)	targ_emul=aarch64elfb
 			targ_extra_emuls="aarch64elf aarch64elf32 aarch64elf32b armelfb armelf"
 			;;
+aarch64*-*-bentobox*)	targ_emul=aarch64linux
+			targ_extra_emuls="aarch64linuxb aarch64elf aarch64elfb"
+			targ_extra_libpath="aarch64elf aarch64elfb"
+			;;
 aarch64-*-elf | aarch64-*-rtems* | aarch64-*-genode*)
 			targ_emul=aarch64elf
 			targ_extra_emuls="aarch64elf32 aarch64elf32b aarch64elfb armelf armelfb"
